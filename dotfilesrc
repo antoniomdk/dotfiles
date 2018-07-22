@@ -7,4 +7,5 @@ ignore = [
     '*.swp',
     'assets',
     'LICENSE',
+    'iterm2',
     '*.md']

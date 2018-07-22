@@ -29,6 +29,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'wesQ3/vim-windowswap'
 Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdcommenter'
+Plug 'danro/rename.vim', { 'on': 'Rename' }
 
 " Text objects
 Plug 'wellle/targets.vim'
@@ -86,5 +87,5 @@ source $HOME/.config/nvim/mappings.vim
 source $HOME/.config/nvim/custom.vim
 
 for f in split(glob('$HOME/.config/nvim/plugins/*.vim'), '\n')
-    exe 'source' f
+  exe 'source' f
 endfor

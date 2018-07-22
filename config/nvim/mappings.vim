@@ -26,7 +26,7 @@ tnoremap <C-K> <C-\><C-N><C-W>k
 tnoremap <C-L> <C-\><C-N><C-W>l
 
 " Jump back mapping
-nnoremap <C-[> :pop<CR>
+" nnoremap <C-[> :pop<CR>
 
 " NERDTree
 nmap <C-p> :NERDTreeToggle<CR>
@@ -41,13 +41,18 @@ nmap <Leader>f :Neoformat<CR>
 nmap <Leader>A :A<CR>
 
 " EasyAlign
-xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
+xmap <Leader>a <Plug>(EasyAlign)
+nmap <Leader>a <Plug>(EasyAlign)
 
 " FZF
 nnoremap <C-Space> :Files<cr>
 nnoremap <C-b> :Buffers<cr>
-nnoremap <C-f> :Ag<cr>
+nnoremap <C-a> :Ag<cr>
+nnoremap <C-f> :BLines<cr>
+
+" Window Swapping
+let g:windowswap_map_keys = 0 "prevent default bindings
+nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
 
 " Show C/C++ Docs with <Shift-k>
 command! -nargs=+ Cppman silent! call system("tmux split-window cppman " . expand(<q-args>))
