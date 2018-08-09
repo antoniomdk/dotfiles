@@ -36,6 +36,7 @@ nmap <C-t> :TagbarToggle<CR>
 
 " Neoformat
 nmap <Leader>f :Neoformat<CR>
+vmap <Leader>f :Neoformat<CR>
 
 " A (jumping to header/implementation file. For C/C++ code)
 nmap <Leader>A :A<CR>
