@@ -40,10 +40,10 @@ Plug 'kana/vim-textobj-user'
 Plug 'junegunn/fzf.vim'
 Plug '/usr/local/opt/fzf'
 Plug 'w0rp/ale'
+Plug 'neomake/neomake'
 Plug 'metakirby5/codi.vim', { 'on': 'Codi'}
 Plug 'Shougo/vimproc.vim', {'build' : 'make'}
 Plug 'Shougo/denite.nvim'
-Plug 'neomake/neomake'
 Plug 'Konfekt/FastFold'
 
 " Tags Management
