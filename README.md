@@ -11,13 +11,15 @@ My personal configuration files for zsh, neovim, tmux, iterm, macOS, tmuxinator.
 Powerful fully-featured editor.
 
 * Special support for: C++, Python, Scala and Haskell (other filetypes are supported as well)
+* Code linting
+* Syntax checker
 * Code completion
 * File browser
 * Formatting tools
 * Fuzzy searching
-* Tag management and exploring
-* Gruvbox theme
+* Tag management and exploration
 * Mnemonic mappings
+* Gruvbox theme
 * A lot of more feautures...
 
 ![vim1](assets/screenshot_vim1.png)
@@ -40,9 +42,24 @@ It is possible to make the editor work with external REPLs in a simple way.
 
 
 
-#### Mappings
+#### Custom Mappings
 
-TODO
+> <Leader> key has been changed to ","
+
+| Key Mapping | Description                                             |
+| ----------- | ------------------------------------------------------- |
+| Ctr-h/j/k/l | Window splits navigation                                |
+| Ctr-p       | Open explorer                                           |
+| Ctr-t       | Open tag bar                                            |
+| <Leader>f   | Format code                                             |
+| <Leader>A   | Jump to header/implementation file. Only for C/C++ code |
+| <Leader>a   | Toggle align-code mode                                  |
+| Ctr-space   | Fuzzy searching through files                           |
+| Ctr-b       | Fuzzy searching through buffers                         |
+| Ctr-a       | Ag searching                                            |
+| Ctr-f       | Find in buffer                                          |
+| <Leader>ww  | Select/Swap window.                                     |
+| <Shift>K    | Show C/C++ docs                                         |
 
 
 
@@ -94,7 +111,7 @@ I use Homebrew package manager that allows me to deal with dependencies easily. 
 
 If you use Linux or Homebrew isn't for you, follow the install instructions of each package to get everything working. In case that you don't want to use some tool, just don't install it, but make sure the aliases and other related files are changed.
 
-> Note: **Neovim requires fzf** for some IDE features so if you want that features you should install it. Fzf can be replaced by Unite, CtrP or any similar plugin, but it is not supported out of the box.
+> Note: **Neovim requires FZF** for some IDE features so, you should install it. FZF can be replaced by Unite, CtrP or any similar plugin, but it is not supported out of the box.
 
 **Neovim** requires python2 and python3 support to work correctly so, make sure your system has both installed and run the following:
 
