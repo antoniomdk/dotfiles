@@ -58,3 +58,9 @@ nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
 " Show C/C++ Docs with <Shift-k>
 command! -nargs=+ Cppman silent! call system("tmux split-window cppman " . expand(<q-args>))
 autocmd FileType cpp nnoremap <silent><buffer> K <Esc>:Cppman <cword><CR>
+
+" Open location list
+nnoremap <Leader>l :lopen<CR>
+
+" Open Quickfix window
+nnoremap <Leader>c :copen<CR>

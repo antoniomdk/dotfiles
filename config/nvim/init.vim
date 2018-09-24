@@ -17,6 +17,10 @@ Plug 'sheerun/vim-polyglot'
 Plug 'jpalardy/vim-slime'
 Plug 'christoomey/vim-tmux-navigator'
 
+" Neoterminal
+Plug 'jalvesaq/vimcmdline'
+Plug 'mklabs/split-term.vim'
+
 " Formatting
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'sbdchd/neoformat', {'on': 'Neoformat'}
@@ -30,6 +34,9 @@ Plug 'wesQ3/vim-windowswap'
 Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdcommenter'
 Plug 'danro/rename.vim', { 'on': 'Rename' }
+
+" Test running helpers
+Plug 'janko-m/vim-test'
 
 " Text objects
 Plug 'wellle/targets.vim'
