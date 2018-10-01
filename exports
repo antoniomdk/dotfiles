@@ -11,10 +11,10 @@ export PATH=$PATH:~/bin
 export PATH=/usr/local/bin:$PATH
 # added by Anaconda3 installer
 export PATH="/Users/AntonioMolner/anaconda3/bin:$PATH"
+export PATH=$PATH:~/.local/bin
 # Adding Scala home to PATH
 export SCALA_HOME="/usr/local/share/scala"
 export PATH=$PATH:$SCALA_HOME/bin
-
 export EXTERNAL_LIBCLANG_PATH="/usr/local/Cellar/llvm/6.0.0/lib/libclang.dylib"
 
 # Used by Octave Jupyter kernel
