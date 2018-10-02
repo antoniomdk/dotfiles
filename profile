@@ -3,10 +3,15 @@ source ~/.exports
 
 # Tmuxinator completion
 source ~/.config/tmuxinator/completion/tmuxinator.zsh
+
 # Fasd initialization
 eval "$(fasd --init auto)"
+
 # Enhancd initialization
 source ~/utils/enhancd/init.sh
+
+# Preferred editor for local and remote sessions
+export EDITOR='nvim'
 
 # Run tmux on start
 if which tmux >/dev/null 2>&1; then
