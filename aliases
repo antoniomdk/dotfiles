@@ -10,6 +10,7 @@ alias diff=icdiff
 alias l='exa'
 alias ll='exa -bghl --color=automatic'
 alias la='exa -abghl --git --color=automatic'
+alias tree="exa --tree"
 # Making cp interactive
 alias cp="cp -iv"
 alias rm="rm -iv"
