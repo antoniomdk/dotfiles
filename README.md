@@ -107,19 +107,21 @@ Default tmuxinator projects to use Neovim with the most common REPLs:
 
 ## Requirements
 
-I use Homebrew package manager that allows me to deal with dependencies easily. If you use it too, run **install.sh** script to install the required packages.
+I use Homebrew package manager, which allows me to deal with dependencies easily. If you use it too, run **install.sh** script to install the required packages.
 
-If you use Linux or Homebrew isn't for you, follow the install instructions of each package to get everything working. In case that you don't want to use some tool, just don't install it, but make sure the aliases and other related files are changed.
+If you use Linux or Homebrew isn't for you, follow the install instructions of each package to get everything working. In case you don't want to use some tool, just don't install it, but make sure the aliases and other related files are changed.
 
 > Note: **Neovim requires FZF** for some IDE features so, you should install it. FZF can be replaced by Unite, CtrP or any similar plugin, but it is not supported out of the box.
 
-**Neovim** requires python2 and python3 support to work correctly so, make sure your system has both installed and run the following:
+**Neovim** requires python2 and python3 support to work correctly. Make sure your system has both Python versions installed and run the following:
 
 ```bash
 pip2 install neovim
 pip3 install neovim
 ```
 
- TODO
+ 
+
+TODO
 
 ...
