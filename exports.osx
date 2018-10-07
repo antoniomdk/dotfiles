@@ -1,0 +1,18 @@
+# Set CLICOLOR if you want Ansi Colors in iTerm2
+export CLICOLOR=1
+
+# Set colors to match iTerm2 Terminal Colors
+export TERM=xterm-256color
+
+export EXTERNAL_LIBCLANG_PATH="/usr/local/Cellar/llvm/6.0.0/lib/libclang.dylib"
+
+# Used by Octave Jupyter kernel
+export OCTAVE_EXECUTABLE=/usr/local/bin/octave-cli
+
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/local/lib
+
+# Added by Conscript
+export PATH="$PATH:$HOME/.conscript/bin"
+export PATH="$PATH:$HOME/.conscript/bin"
+
