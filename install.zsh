@@ -65,10 +65,13 @@ pip2 install neovim
 pip3 install neovim
 
 # Install dotfiles
-echo "Installing dotfiles manager"
-pip install dotfiles
 echo "Making a backup of your dotfiles ----> $HOME/dotfiles_OLD"
 mkdir dotfiles_OLD
 cp -a ~/.profile ~/.zshrc ~/.tmux.conf ~/.bashrc dotfiles_OLD/
-echo "Linking dotfiles"
-dotfiles -R.  --sync --force
+echo "Copying dotfiles"
+cp bashrc $HOME/.bashrc
+cp zshrc $HOME/.zshrc
+cp tmux.conf $HOME/.tmux.conf
+cp exports $HOME/.exports
+cp aliases $HOME/.aliases
+cp -r config/* $HOME/.config/
