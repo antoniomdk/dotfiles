@@ -48,7 +48,7 @@ nmap <Leader>a <Plug>(EasyAlign)
 " FZF
 nnoremap <C-Space> :Files<cr>
 nnoremap <C-b> :Buffers<cr>
-nnoremap <C-a> :Ag<cr>
+"nnoremap <C-a> :Ag<cr> " Mapping used by tmux
 nnoremap <C-f> :BLines<cr>
 
 " Window Swapping

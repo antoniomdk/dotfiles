@@ -4,11 +4,6 @@ echo "Updating homebrew/linuxbrew..."
 #brew update
 
 echo "Installing cli utilities"
-# Fuzzy finder
-if ! command -v fzf &> /dev/null; then
-  brew install fzf
-fi
-
 # A fast code searching tool
 if ! command -v ag &> /dev/null; then
   brew install the_silver_searcher
@@ -54,6 +49,11 @@ if ! command -v tmuxinator &> /dev/null; then
   gem install tmuxinator
 fi
 
+# Install enhanced diff tool
+if ! command -v icdiff &> /dev/null; then
+  brew install icdiff
+fi
+
 # Ctags. (Used by Neovim)
 if ! command -v ctags &> /dev/null; then
   brew install --HEAD universal-ctags/universal-ctags/universal-ctags
@@ -67,7 +67,7 @@ pip3 install neovim
 # Install dotfiles
 echo "Making a backup of your dotfiles ----> $HOME/dotfiles_OLD"
 mkdir dotfiles_OLD
-cp -a ~/.profile ~/.zshrc ~/.tmux.conf ~/.bashrc dotfiles_OLD/
+cp -a ~/.profile ~/.zshrc ~/.tmux.conf ~/.bashrc $HOME/dotfiles_OLD/
 echo "Copying dotfiles"
 cp bashrc $HOME/.bashrc
 cp zshrc $HOME/.zshrc
