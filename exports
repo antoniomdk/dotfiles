@@ -26,3 +26,5 @@ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/local/lib
 # Added by Conscript
 export PATH="$PATH:/Users/AntonioMolner/.conscript/bin"
 export PATH="$PATH:/Users/AntonioMolner/.conscript/bin"
+export PATH='/bin:/sbin':"$PATH"
+export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
