@@ -75,3 +75,11 @@ cp tmux.conf $HOME/.tmux.conf
 cp exports $HOME/.exports
 cp aliases $HOME/.aliases
 cp -r config/* $HOME/.config/
+
+# Installing platform-dependent files
+if [[ $platform == 'linux' ]]; then
+  cat exports.linux >> $HOME/.exports
+elif [[ $platform == 'darwin' ]]; then
+  cat exports.osx >> $HOME/.exports
+  cat aliases.osx >> $HOME/.aliases
+fi
