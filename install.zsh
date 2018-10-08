@@ -83,3 +83,5 @@ elif [[ $platform == 'darwin' ]]; then
   cat exports.osx >> $HOME/.exports
   cat aliases.osx >> $HOME/.aliases
 fi
+
+echo "You should restore autocompletions. To do it, just use:\nautoload -Uz compinstall && compinstall"
