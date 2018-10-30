@@ -44,8 +44,8 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'kana/vim-textobj-user'
 
 " Common IDE Plugins
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug '/usr/local/opt/fzf'
 Plug 'w0rp/ale'
 Plug 'neomake/neomake'
 Plug 'metakirby5/codi.vim', { 'on': 'Codi'}
