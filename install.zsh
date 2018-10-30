@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 echo "Updating homebrew/linuxbrew..."
-#brew update
+brew update
 
 echo "Installing cli utilities"
 # Fuzzy finder
@@ -19,9 +19,11 @@ if ! command -v rg &> /dev/null; then
   brew install ripgrep
 fi
 
-echo "Installing enhanced navigation utilities"
 # Enhanced directory navigation
+echo "Installing enhanced navigation utilities"
+
 git clone https://github.com/b4b4r07/enhancd.git  $HOME/utils/enhancd
+
 if ! command -v fasd &> /dev/null; then
   brew install fasd
 fi
@@ -68,13 +70,14 @@ pip3 install neovim
 echo "Making a backup of your dotfiles ----> $HOME/dotfiles_OLD"
 mkdir dotfiles_OLD
 cp -a ~/.profile ~/.zshrc ~/.tmux.conf ~/.bashrc dotfiles_OLD/
-echo "Copying dotfiles"
-cp bashrc $HOME/.bashrc
-cp zshrc $HOME/.zshrc
-cp tmux.conf $HOME/.tmux.conf
-cp exports $HOME/.exports
-cp aliases $HOME/.aliases
-cp -r config/* $HOME/.config/
+
+echo "Creating symlinks"
+ln -s bashrc    $HOME/.bashrc
+ln -s zshrc     $HOME/.zshrc
+ln -s tmux.conf $HOME/.tmux.conf
+ln -s exports   $HOME/.exports
+ln -s aliases   $HOME/.aliases
+ln -s config    $HOME/.config/
 
 # Installing platform-dependent files
 if [[ $platform == 'linux' ]]; then
