@@ -17,7 +17,9 @@ fi
 # Enhanced directory navigation
 echo "Installing enhanced navigation utilities"
 
-git clone https://github.com/b4b4r07/enhancd.git  $HOME/utils/enhancd
+if [ ! -d "$HOME/utils/enhancd" ]; then
+  git clone https://github.com/b4b4r07/enhancd.git  $HOME/utils/enhancd
+fi
 
 if ! command -v fasd &> /dev/null; then
   brew install fasd
@@ -68,23 +70,32 @@ pip3 install neovim
 
 # Install dotfiles
 echo "Making a backup of your dotfiles ----> $HOME/dotfiles_OLD"
-mkdir dotfiles_OLD
-cp -a ~/.profile ~/.zshrc ~/.tmux.conf ~/.bashrc $HOME/dotfiles_OLD/
+mkdir -p $HOME/dotfiles_OLD
+cp -af ~/.profile ~/.zshrc ~/.tmux.conf ~/.bashrc $HOME/dotfiles_OLD/
 
 echo "Creating symlinks"
-ln -s bashrc    $HOME/.bashrc
-ln -s zshrc     $HOME/.zshrc
-ln -s tmux.conf $HOME/.tmux.conf
-ln -s exports   $HOME/.exports
-ln -s aliases   $HOME/.aliases
-ln -s config    $HOME/.config/
+DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+
+ln -nvfs $DOTFILES_DIR/bashrc    $HOME/.bashrc
+ln -nvfs $DOTFILES_DIR/zshrc     $HOME/.zshrc
+ln -nvfs $DOTFILES_DIR/tmux.conf $HOME/.tmux.conf
+ln -nvfs $DOTFILES_DIR/exports   $HOME/.exports
+ln -nvfs $DOTFILES_DIR/aliases   $HOME/.aliases
+
+find config -type d | while read dir; do
+  mkdir -p $HOME/.$dir
+done
+
+find config -type f | while read line; do
+  ln -nvfs $DOTFILES_DIR/$line $HOME/.$line
+done
 
 # Installing platform-dependent files
-if [[ $platform == 'linux' ]]; then
-  cat exports.linux >> $HOME/.exports
-elif [[ $platform == 'darwin' ]]; then
+if [[ $platform == 'darwin' ]]; then
   cat exports.osx >> $HOME/.exports
   cat aliases.osx >> $HOME/.aliases
+else
+  cat exports.linux >> $HOME/.exports
 fi
 
-echo "You should restore autocompletions. To do it, just use:\nautoload -Uz compinstall && compinstall"
+echo "\nYou should restore autocompletions. To do it, just use:\nautoload -Uz compinstall && compinstall"

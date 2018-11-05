@@ -39,7 +39,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+export ZSH_CUSTOM=$ZSH/custom
 
 plugins=(git zsh-autosuggestions brew pip)
 

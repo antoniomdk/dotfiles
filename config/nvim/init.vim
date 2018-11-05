@@ -52,6 +52,7 @@ Plug 'metakirby5/codi.vim', { 'on': 'Codi'}
 Plug 'Shougo/vimproc.vim', {'build' : 'make'}
 Plug 'Shougo/denite.nvim'
 Plug 'Konfekt/FastFold'
+Plug 'mhinz/vim-startify'
 
 " Tags Management
 Plug 'ludovicchabant/vim-gutentags'
