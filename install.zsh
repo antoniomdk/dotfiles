@@ -82,13 +82,12 @@ ln -nvfs $DOTFILES_DIR/tmux.conf $HOME/.tmux.conf
 ln -nvfs $DOTFILES_DIR/exports   $HOME/.exports
 ln -nvfs $DOTFILES_DIR/aliases   $HOME/.aliases
 
-find config -type d | while read dir; do
-  mkdir -p $HOME/.$dir
+mkdir -p $HOME/.config
+
+find config -mindepth 1 -maxdepth 1 | while read dir; do
+  ln -nvfs $DOTFILES_DIR/$dir $HOME/.$dir
 done
 
-find config -type f | while read line; do
-  ln -nvfs $DOTFILES_DIR/$line $HOME/.$line
-done
 
 # Installing platform-dependent files
 if [[ $platform == 'darwin' ]]; then

@@ -29,6 +29,7 @@ set shiftwidth=2               " Number of auto-indent spaces
 set smartindent                " Enable smart-indent
 set softtabstop=2              " Number of spaces per Tab
 set undolevels=1000            " Number of undo levels
+set splitright
 
 """""""""THEME SETTINGS""""""""""""
 set background=dark

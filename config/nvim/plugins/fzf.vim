@@ -1,7 +1,7 @@
 "=====================================================
 " FZF
 "=====================================================
-let g:fzf_layout = { 'down': '~20%' }
+let g:fzf_layout = { 'down': '~40%' }
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =

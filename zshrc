@@ -59,3 +59,9 @@ source $HOME/.profile
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/antoniomdk/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall

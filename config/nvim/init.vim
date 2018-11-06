@@ -8,7 +8,7 @@ Plug 'tpope/vim-endwise'
 Plug 'jiangmiao/auto-pairs'
 
 " File management
-Plug 'scrooloose/nerdtree', {'on_cmd': 'NERDTreeToggle'}
+Plug 'scrooloose/nerdtree'
 
 " Sintax support
 Plug 'sheerun/vim-polyglot'
@@ -34,6 +34,8 @@ Plug 'wesQ3/vim-windowswap'
 Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdcommenter'
 Plug 'danro/rename.vim', { 'on': 'Rename' }
+Plug 'tpope/vim-fugitive'
+
 
 " Test running helpers
 Plug 'janko-m/vim-test'
@@ -97,3 +99,10 @@ source $HOME/.config/nvim/custom.vim
 for f in split(glob('$HOME/.config/nvim/plugins/*.vim'), '\n')
   exe 'source' f
 endfor
+
+autocmd VimEnter *
+      \   if !argc()
+      \ |   Startify
+      \ |   NERDTree
+      \ |   wincmd w
+      \ | endif
