@@ -15,4 +15,3 @@ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/local/lib
 # Added by Conscript
 export PATH="$PATH:$HOME/.conscript/bin"
 export PATH="$PATH:$HOME/.conscript/bin"
-

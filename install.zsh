@@ -31,6 +31,7 @@ if ! command -v exa &> /dev/null; then
 fi
 
 # Installing ohmyzsh theme
+rm -rf $ZSH_CUSTOM/themes/spaceship-prompt $ZSH_CUSTOM/themes/spaceship.zsh-theme 2>/dev/null
 git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
@@ -71,7 +72,9 @@ pip3 install neovim
 # Install dotfiles
 echo "Making a backup of your dotfiles ----> $HOME/dotfiles_OLD"
 mkdir -p $HOME/dotfiles_OLD
-cp -af ~/.profile ~/.zshrc ~/.tmux.conf ~/.bashrc $HOME/dotfiles_OLD/
+mv -af $HOME/.profile $HOME/.zshrc $HOME/.tmux.conf $HOME/.bashrc $HOME/dotfiles_OLD/ 2>/dev/null
+mv -af $HOME/.exports $HOME/.exports.osx $HOME/.exports.linux $HOME/dotfiles_OLD/ 2>/dev/null
+mv -af $HOME/.aliases $HOME/.aliases.osx $HOME/.aliases.linux $HOME/dotfiles_OLD/ 2>/dev/null
 
 echo "Creating symlinks"
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
@@ -79,22 +82,26 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 ln -nvfs $DOTFILES_DIR/bashrc    $HOME/.bashrc
 ln -nvfs $DOTFILES_DIR/zshrc     $HOME/.zshrc
 ln -nvfs $DOTFILES_DIR/tmux.conf $HOME/.tmux.conf
+ln -nvfs $DOTFILES_DIR/profile   $HOME/.profile
 ln -nvfs $DOTFILES_DIR/exports   $HOME/.exports
 ln -nvfs $DOTFILES_DIR/aliases   $HOME/.aliases
 
 mkdir -p $HOME/.config
 
 find config -mindepth 1 -maxdepth 1 | while read dir; do
-  ln -nvfs $DOTFILES_DIR/$dir $HOME/.$dir
+ln -nvfs $DOTFILES_DIR/$dir $HOME/.$dir
 done
 
+case "$OSTYPE" in
+  darwin*)
+    ln -nvfs $DOTFILES_DIR/exports.osx $HOME/.exports.osx
+    ln -nvfs $DOTFILES_DIR/aliases.osx $HOME/.aliases.osx
+    ;;
+  linux*)
+    ln -nvfs $DOTFILES_DIR/exports.linux $HOME/.exports.linux
+    ln -nvfs $DOTFILES_DIR/aliases.linux $HOME/.aliases.linux
+    ;;
+esac
 
-# Installing platform-dependent files
-if [[ $platform == 'darwin' ]]; then
-  cat exports.osx >> $HOME/.exports
-  cat aliases.osx >> $HOME/.aliases
-else
-  cat exports.linux >> $HOME/.exports
-fi
-
+exec ${SHELL} -l
 echo "\nYou should restore autocompletions. To do it, just use:\nautoload -Uz compinstall && compinstall"

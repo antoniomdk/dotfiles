@@ -12,11 +12,14 @@ export SCALA_HOME="/usr/local/share/scala"
 export PATH=$PATH:$SCALA_HOME/bin
 
 export PATH='/bin:/sbin':"$PATH"
-export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
-export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
-export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
-export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
-export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
-export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
-export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
-export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
+
+OSX_EXPORTS="$HOME/.exports.osx"
+LINUX_EXPORTS="$HOME/.exports.linux"
+
+if [ -d  $OSX_EXPORTS ]; then
+  source $OSX_EXPORTS
+fi
+
+if [ -d  $LINUX_EXPORTS ]; then
+  source $LINUX_EXPORTS
+fi

@@ -1,5 +1,5 @@
 source ~/.aliases
-source ~/.exports
+#source ~/.exports
 
 # Tmuxinator completion
 source ~/.config/tmuxinator/completion/tmuxinator.zsh
