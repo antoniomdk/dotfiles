@@ -16,10 +16,10 @@ export PATH='/bin:/sbin':"$PATH"
 OSX_EXPORTS="$HOME/.exports.osx"
 LINUX_EXPORTS="$HOME/.exports.linux"
 
-if [ -d  $OSX_EXPORTS ]; then
+if [ -f  $OSX_EXPORTS ]; then
   source $OSX_EXPORTS
 fi
 
-if [ -d  $LINUX_EXPORTS ]; then
+if [ -f  $LINUX_EXPORTS ]; then
   source $LINUX_EXPORTS
 fi

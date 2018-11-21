@@ -15,3 +15,6 @@ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/local/lib
 # Added by Conscript
 export PATH="$PATH:$HOME/.conscript/bin"
 export PATH="$PATH:$HOME/.conscript/bin"
+
+export PATH="$HOME/Library/Python/2.7/bin:$PATH"
+export PATH="$HOME/Library/Python/3.7/bin:$PATH"

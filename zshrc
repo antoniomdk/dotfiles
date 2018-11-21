@@ -18,7 +18,7 @@ export TERM="xterm-256color"
 export UPDATE_ZSH_DAYS=7
 
 # Uncomment the following line to disable colors in ls.
-DISABLE_LS_COLORS="true"
+#DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"

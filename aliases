@@ -29,10 +29,10 @@ alias reload="exec ${SHELL} -l"
 OSX_ALIASES="$HOME/.aliases.osx"
 LINUX_ALIASES="$HOME/.aliases.linux"
 
-if [ -d  $OSX_ALIASES ]; then
+if [ -f  $OSX_ALIASES ]; then
   source $OSX_ALIASES
 fi
 
-if [ -d  $LINUX_ALIASES ]; then
+if [ -f  $LINUX_ALIASES ]; then
   source $LINUX_ALIASES
 fi

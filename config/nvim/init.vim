@@ -1,7 +1,7 @@
 " Required:
 call plug#begin('~/.local/share/nvim/plugged')
 
-" Common completion plugins
+" Completion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'tpope/vim-endwise'
@@ -36,7 +36,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'danro/rename.vim', { 'on': 'Rename' }
 Plug 'tpope/vim-fugitive'
 
-
 " Test running helpers
 Plug 'janko-m/vim-test'
 
@@ -48,13 +47,11 @@ Plug 'kana/vim-textobj-user'
 " Common IDE Plugins
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'w0rp/ale'
 Plug 'neomake/neomake'
 Plug 'metakirby5/codi.vim', { 'on': 'Codi'}
 Plug 'Shougo/vimproc.vim', {'build' : 'make'}
 Plug 'Shougo/denite.nvim'
 Plug 'Konfekt/FastFold'
-Plug 'mhinz/vim-startify'
 
 " Tags Management
 Plug 'ludovicchabant/vim-gutentags'
@@ -65,20 +62,17 @@ Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 
 " Haskell
-Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
-Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
+Plug 'Twinside/vim-hoogle', { 'for': 'haskell' }
 Plug 'pbrisbin/vim-syntax-shakespeare', {'for': 'haskell' }
+Plug 'neovimhaskell/haskell-vim', {'for': 'haskell' }
+Plug 'parsonsmatt/intero-neovim', {'for': 'haskell'}
+Plug 'bitc/vim-hdevtools', {'for': 'haskell'}
 
 " Python
 Plug 'zchee/deoplete-jedi', {'for': 'python'}
 Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
-Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins', 'for': 'python'}
 Plug 'tmhedberg/SimpylFold', { 'for': 'python' }
 Plug 'jeetsukumaran/vim-pythonsense', { 'for': 'python' }
-
-" Typescript
-Plug 'mhartington/nvim-typescript', { 'for': 'typescript' }
-Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript' }
 
 " C++
 Plug 'vim-scripts/a.vim', { 'for': ['c', 'cpp'] }
@@ -99,10 +93,3 @@ source $HOME/.config/nvim/custom.vim
 for f in split(glob('$HOME/.config/nvim/plugins/*.vim'), '\n')
   exe 'source' f
 endfor
-
-autocmd VimEnter *
-      \   if !argc()
-      \ |   Startify
-      \ |   NERDTree
-      \ |   wincmd w
-      \ | endif
