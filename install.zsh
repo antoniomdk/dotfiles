@@ -96,6 +96,8 @@ case "$OSTYPE" in
   darwin*)
     ln -nvfs $DOTFILES_DIR/exports.osx $HOME/.exports.osx
     ln -nvfs $DOTFILES_DIR/aliases.osx $HOME/.aliases.osx
+    ln -nvfs $DOTFILES_DIR/tmux-osx.conf $HOME/.tmux-osx.conf
+    ln -nvfs $DOTFILES_DIR/tmux-osx.conf $HOME/.tmux-linux.conf
     ;;
   linux*)
     ln -nvfs $DOTFILES_DIR/exports.linux $HOME/.exports.linux

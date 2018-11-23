@@ -35,6 +35,7 @@ Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdcommenter'
 Plug 'danro/rename.vim', { 'on': 'Rename' }
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 " Test running helpers
 Plug 'janko-m/vim-test'
@@ -54,12 +55,13 @@ Plug 'Shougo/denite.nvim'
 Plug 'Konfekt/FastFold'
 
 " Tags Management
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar', { 'on': ['TagBar', 'TagbarToggle'] }
 
 " Interface
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
-Plug 'morhetz/gruvbox'
+"Plug 'morhetz/gruvbox'
+Plug 'joshdick/onedark.vim'
+Plug 'rakr/vim-one'
 
 " Haskell
 Plug 'Twinside/vim-hoogle', { 'for': 'haskell' }

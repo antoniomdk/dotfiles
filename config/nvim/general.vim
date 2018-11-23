@@ -1,5 +1,5 @@
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
+set termguicolors
 
 "=====================================================
 " EDITOR settings
@@ -32,6 +32,7 @@ set undolevels=1000            " Number of undo levels
 set splitright
 
 """""""""THEME SETTINGS""""""""""""
+"set background=dark
+colorscheme one
 set background=dark
-colorscheme gruvbox
 set guifont=Knack_Nerd_Font:h12

@@ -20,9 +20,6 @@ alias du="du -cksh"
 alias df="df -h"
 # Overriding system ctags
 alias ctags="`brew --prefix`/bin/ctags"
-# Enable 256 colors for tmux
-alias tmux="TERM=screen-256color-bce tmux"
-# Merge two pdfs
 # Reload the shell
 alias reload="exec ${SHELL} -l"
 
