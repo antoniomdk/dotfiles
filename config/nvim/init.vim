@@ -34,6 +34,9 @@ Plug 'wesQ3/vim-windowswap'
 Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdcommenter'
 Plug 'danro/rename.vim', { 'on': 'Rename' }
+
+" Git
+Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
@@ -50,8 +53,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'neomake/neomake'
 Plug 'metakirby5/codi.vim', { 'on': 'Codi'}
-Plug 'Shougo/vimproc.vim', {'build' : 'make'}
-Plug 'Shougo/denite.nvim'
 Plug 'Konfekt/FastFold'
 
 " Tags Management
@@ -59,12 +60,10 @@ Plug 'majutsushi/tagbar', { 'on': ['TagBar', 'TagbarToggle'] }
 
 " Interface
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
-"Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
 Plug 'rakr/vim-one'
 
 " Haskell
-Plug 'Twinside/vim-hoogle', { 'for': 'haskell' }
 Plug 'pbrisbin/vim-syntax-shakespeare', {'for': 'haskell' }
 Plug 'neovimhaskell/haskell-vim', {'for': 'haskell' }
 Plug 'parsonsmatt/intero-neovim', {'for': 'haskell'}
