@@ -6,7 +6,7 @@
 let g:neoformat_enabled_haskell = ['brittany', 'stylishhaskell']
 let g:neomake_haskell_enabled_makers = ['hlint', 'hdevtools']
 
-let g:hdevtools_stack = 1
+let g:hdevtools_stack = 0
 
 let g:intero_start_immediately = 0
 let g:intero_type_on_hover = 0
