@@ -60,7 +60,6 @@ Plug 'majutsushi/tagbar', { 'on': ['TagBar', 'TagbarToggle'] }
 
 " Interface
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
-Plug 'joshdick/onedark.vim'
 Plug 'rakr/vim-one'
 
 " Haskell
