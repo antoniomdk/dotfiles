@@ -31,7 +31,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'wesQ3/vim-windowswap'
-Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdcommenter'
 Plug 'danro/rename.vim', { 'on': 'Rename' }
 
@@ -83,6 +82,10 @@ Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 
 " Ruby
 Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
+
+" Note Taking
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 
 call plug#end()
 

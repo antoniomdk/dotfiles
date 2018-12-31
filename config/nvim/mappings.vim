@@ -33,6 +33,7 @@ nmap <C-p> :NERDTreeToggle<CR>
 
 " Tagbar
 nmap <C-t> :TagbarToggle<CR>
+autocmd FileType pandoc nmap <C-t> :TOC<CR>
 
 " Neoformat
 nmap <Leader>f :Neoformat<CR>
