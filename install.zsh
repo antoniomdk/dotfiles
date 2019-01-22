@@ -85,6 +85,7 @@ ln -nvfs $DOTFILES_DIR/tmux.conf $HOME/.tmux.conf
 ln -nvfs $DOTFILES_DIR/profile   $HOME/.profile
 ln -nvfs $DOTFILES_DIR/exports   $HOME/.exports
 ln -nvfs $DOTFILES_DIR/aliases   $HOME/.aliases
+ln -nvfs $DOTFILES_DIR/bin       $HOME/bin
 
 mkdir -p $HOME/.config
 
