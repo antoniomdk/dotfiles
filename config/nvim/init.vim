@@ -1,3 +1,5 @@
+let g:python3_host_prog=$HOME.'/Documents/Projects/neovim_python_env/bin/python'
+
 " Required:
 call plug#begin('~/.local/share/nvim/plugged')
 
@@ -96,3 +98,5 @@ source $HOME/.config/nvim/custom.vim
 for f in split(glob('$HOME/.config/nvim/plugins/*.vim'), '\n')
   exe 'source' f
 endfor
+
+
