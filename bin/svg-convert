@@ -1,0 +1,10 @@
+find . -type f -name "*.svg" | while read f
+do
+	echo '---'
+	FILENAME="${f%.*}"
+	echo $FILENAME
+	WIDTH=$(convert "$FILENAME.svg" -print "%w" /dev/null | awk '{ rounded = sprintf("%.0f", $1); print rounded; }')
+	convert -background none -density $(($WIDTH * 300)) -resize $(($WIDTH * 1))x "${FILENAME}.svg" "${FILENAME}@1x.png"
+	convert -background none -density $(($WIDTH * 300)) -resize $(($WIDTH * 2))x "${FILENAME}.svg" "${FILENAME}@2x.png"
+	convert -background none -density $(($WIDTH * 300)) -resize $(($WIDTH * 3))x "${FILENAME}.svg" "${FILENAME}@3x.png"
+done

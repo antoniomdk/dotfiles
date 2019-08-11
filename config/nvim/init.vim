@@ -4,8 +4,8 @@ let g:python3_host_prog=$HOME.'/Documents/Projects/neovim_python_env/bin/python'
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Completion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'honza/vim-snippets'
 Plug 'tpope/vim-endwise'
 Plug 'jiangmiao/auto-pairs'
 
@@ -70,14 +70,12 @@ Plug 'parsonsmatt/intero-neovim', {'for': 'haskell'}
 Plug 'bitc/vim-hdevtools', {'for': 'haskell'}
 
 " Python
-Plug 'zchee/deoplete-jedi', {'for': 'python'}
 Plug 'vim-scripts/indentpython.vim', { 'for': 'python' }
 Plug 'tmhedberg/SimpylFold', { 'for': 'python' }
 Plug 'jeetsukumaran/vim-pythonsense', { 'for': 'python' }
 
 " C++
 Plug 'vim-scripts/a.vim', { 'for': ['c', 'cpp'] }
-Plug 'tweekmonster/deoplete-clang2', { 'for': ['c', 'cpp'] }
 
 " Scala
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
@@ -85,12 +83,18 @@ Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 " Ruby
 Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
 
+" Javascript
+Plug 'alvan/vim-closetag'
+
 " Note Taking
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
-call plug#end()
+" Productivity
+Plug 'itchyny/calendar.vim', { 'on': ['Calendar'] }
 
+
+call plug#end()
 source $HOME/.config/nvim/general.vim
 source $HOME/.config/nvim/mappings.vim
 source $HOME/.config/nvim/custom.vim
@@ -98,5 +102,3 @@ source $HOME/.config/nvim/custom.vim
 for f in split(glob('$HOME/.config/nvim/plugins/*.vim'), '\n')
   exe 'source' f
 endfor
-
-

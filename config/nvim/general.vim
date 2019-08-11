@@ -17,9 +17,10 @@ set smartcase
 set magic
 set showmatch
 set nobackup
+set nowritebackup
 set nowb
 set noerrorbells
-set updatetime=250
+set updatetime=300
 set linebreak                  " Break lines at word (requires Wrap lines)
 set showbreak=+++              " Wrap-broken line prefix
 set textwidth=90               " Line wrap (number of cols)
@@ -30,6 +31,8 @@ set smartindent                " Enable smart-indent
 set softtabstop=2              " Number of spaces per Tab
 set undolevels=1000            " Number of undo levels
 set splitright
+set shortmess+=c
+set signcolumn=yes
 
 """""""""THEME SETTINGS""""""""""""
 "set background=dark

@@ -1,0 +1,5 @@
+{
+  "prettier.eslintIntegration": true,
+  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "js", "jsx"],
+  "eslint.autoFixOnSave": true
+}

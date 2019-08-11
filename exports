@@ -13,6 +13,12 @@ export PATH=$PATH:$SCALA_HOME/bin
 
 export PATH='/bin:/sbin':"$PATH"
 
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 OSX_EXPORTS="$HOME/.exports.osx"
 LINUX_EXPORTS="$HOME/.exports.linux"
 

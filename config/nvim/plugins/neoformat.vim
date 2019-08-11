@@ -12,3 +12,4 @@ let g:neoformat_try_formatprg = 0
 
 let g:neoformat_enabled_haskell = ['brittany', 'stylishhaskell']
 let g:neoformat_enabled_python = ['yapf', 'autopep8']
+let g:neoformat_enabled_javascript = ['prettiereslint']

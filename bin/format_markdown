@@ -1,0 +1,6 @@
+#!/bin/bash
+
+INPUT="+abbreviations+autolink_bare_uris+markdown_attribute+tex_math_double_backslash+emoji"
+OUTPUT="+raw_tex-native_spans-simple_tables-multiline_tables+emoji"
+
+pandoc -f "markdown$INPUT" -t "markdown$OUTPUT" $1 -o $1

@@ -36,6 +36,7 @@ git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/theme
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
 echo "Installing neovim"
+
 # Neovim
 if ! command -v nvim &> /dev/null; then
   brew install neovim
@@ -75,17 +76,19 @@ mkdir -p $HOME/dotfiles_OLD
 mv -af $HOME/.profile $HOME/.zshrc $HOME/.tmux.conf $HOME/.bashrc $HOME/dotfiles_OLD/ 2>/dev/null
 mv -af $HOME/.exports $HOME/.exports.osx $HOME/.exports.linux $HOME/dotfiles_OLD/ 2>/dev/null
 mv -af $HOME/.aliases $HOME/.aliases.osx $HOME/.aliases.linux $HOME/dotfiles_OLD/ 2>/dev/null
+mv -af $HOME/.carbon-now.json $HOME/dotfiles_OLD/ 2>/dev/null
 
 echo "Creating symlinks"
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 
-ln -nvfs $DOTFILES_DIR/bashrc    $HOME/.bashrc
-ln -nvfs $DOTFILES_DIR/zshrc     $HOME/.zshrc
-ln -nvfs $DOTFILES_DIR/tmux.conf $HOME/.tmux.conf
-ln -nvfs $DOTFILES_DIR/profile   $HOME/.profile
-ln -nvfs $DOTFILES_DIR/exports   $HOME/.exports
-ln -nvfs $DOTFILES_DIR/aliases   $HOME/.aliases
-ln -nvfs $DOTFILES_DIR/bin       $HOME/bin
+ln -nvfs $DOTFILES_DIR/bashrc          $HOME/.bashrc
+ln -nvfs $DOTFILES_DIR/zshrc           $HOME/.zshrc
+ln -nvfs $DOTFILES_DIR/tmux.conf       $HOME/.tmux.conf
+ln -nvfs $DOTFILES_DIR/profile         $HOME/.profile
+ln -nvfs $DOTFILES_DIR/exports         $HOME/.exports
+ln -nvfs $DOTFILES_DIR/aliases         $HOME/.aliases
+ln -nvfs $DOTFILES_DIR/carbon-now.json $HOME/.carbon-now.json
+ln -nvfs $DOTFILES_DIR/bin             $HOME/bin
 
 mkdir -p $HOME/.config
 
@@ -95,8 +98,8 @@ done
 
 case "$OSTYPE" in
   darwin*)
-    ln -nvfs $DOTFILES_DIR/exports.osx $HOME/.exports.osx
-    ln -nvfs $DOTFILES_DIR/aliases.osx $HOME/.aliases.osx
+    ln -nvfs $DOTFILES_DIR/exports.osx   $HOME/.exports.osx
+    ln -nvfs $DOTFILES_DIR/aliases.osx   $HOME/.aliases.osx
     ln -nvfs $DOTFILES_DIR/tmux-osx.conf $HOME/.tmux-osx.conf
     ln -nvfs $DOTFILES_DIR/tmux-osx.conf $HOME/.tmux-linux.conf
     ;;

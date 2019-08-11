@@ -17,3 +17,4 @@ let g:neomake_python_pylint_maker = {
 
 let g:neomake_python_enabled_makers = ['pylint', 'flake8']
 let g:neomake_haskell_enabled_makers = ['hlint', 'hdevtools']
+let g:neomake_javascript_enabled_makers = []
