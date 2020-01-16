@@ -15,3 +15,5 @@ export PATH="$PATH:$HOME/.conscript/bin"
 
 export PATH="$HOME/Library/Python/2.7/bin:$PATH"
 export PATH="$HOME/Library/Python/3.7/bin:$PATH"
+
+export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/

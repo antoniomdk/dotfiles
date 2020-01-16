@@ -23,3 +23,11 @@ export EDITOR='nvim'
 #    tmux attach || break
 #  done
 #fi
+
+export PATH="$HOME/.poetry/bin:$PATH"
+
+# Recruitbot project
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH="$PATH:/Users/AntonioMolner/Applications/activator-1.3.2-minimal:/Users/jschiff/Library/Python/2.7/bin"
+export HISTSIZE=1000000000
+export HISTFILESIZE=100000000

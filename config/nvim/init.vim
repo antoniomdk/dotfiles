@@ -85,6 +85,8 @@ Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
 
 " Javascript
 Plug 'alvan/vim-closetag'
+Plug 'salomvary/vim-eslint-compiler'
+Plug 'ap/vim-css-color'
 
 " Note Taking
 Plug 'vim-pandoc/vim-pandoc'
@@ -92,6 +94,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 
 " Productivity
 Plug 'itchyny/calendar.vim', { 'on': ['Calendar'] }
+Plug 'aaronbieber/vim-quicktask'
 
 
 call plug#end()

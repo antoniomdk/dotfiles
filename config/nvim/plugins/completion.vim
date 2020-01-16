@@ -9,7 +9,6 @@ let g:clang2_placeholder_next='<C-j>'
 "=====================================================
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 
 let g:coc_snippet_next = '<tab>'
 

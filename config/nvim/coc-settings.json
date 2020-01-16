@@ -1,5 +1,8 @@
 {
   "prettier.eslintIntegration": true,
-  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "js", "jsx"],
-  "eslint.autoFixOnSave": true
+  "coc.preferences.formatOnSaveFiletypes": ["css", "Markdown", "js", "jsx", "py"],
+  "eslint.autoFixOnSave": true,
+  "python.jediEnabled": false,
+  "typescript.suggest.enabled": false,
+  "javascript.suggest.enabled": false
 }
