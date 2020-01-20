@@ -30,10 +30,15 @@ if ! command -v exa &> /dev/null; then
   brew install exa
 fi
 
-# Installing ohmyzsh theme
+# Installing ohmyzsh and plugins
+echo "Installing ohmyzsh"
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 rm -rf $ZSH_CUSTOM/themes/spaceship-prompt $ZSH_CUSTOM/themes/spaceship.zsh-theme 2>/dev/null
 git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
 
 echo "Installing neovim"
 
