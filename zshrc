@@ -58,3 +58,5 @@ source $HOME/.profile
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 #
+eval "$(_ML_EXPERIMENT_COMPLETE=source_zsh ml-experiment 2>/dev/null)"
+eval "$(_ML_EXPERIMENT_COMPLETE=source_zsh ml-experiment 2>/dev/null)"

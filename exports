@@ -19,6 +19,10 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+export ANDROID_NDK=$ANDROID_HOME/ndk
+
+export PATH=$PATH:/Applications/root_v6.18.04/bin
+
 OSX_EXPORTS="$HOME/.exports.osx"
 LINUX_EXPORTS="$HOME/.exports.linux"
 
